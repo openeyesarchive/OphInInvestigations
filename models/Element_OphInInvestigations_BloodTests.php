@@ -100,10 +100,10 @@ class Element_OphInInvestigations_BloodTests extends BaseEventTypeElement
 		return array(
 			'id' => 'ID',
 			'event_id' => 'Event',
-			'hb_hct_tested' => 'Hb Hct tested',
-			'hb_hct' => 'Hb Hct',
-			'bun_electrolytes_tested' => 'BUN Electrolytes',
-			'bun_electrolytes' => 'BUN Electrolytes',
+			'hb_hct_tested' => 'Hb/Hct tested',
+			'hb_hct' => 'Hb/Hct',
+			'bun_electrolytes_tested' => 'BUN/Electrolytes',
+			'bun_electrolytes' => 'BUN/Electrolytes',
 			'blood_glucose_tested' => 'Blood glucose',
 			'blood_glucose' => 'Blood glucose',
 		);
