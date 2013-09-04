@@ -32,6 +32,7 @@
 			<div class="test_result hb_hct_result"<?php if ($this->hideHbHctResult($element)) {?> style="display: none"<?php }?>>
 				<span>Result:</span>
 				<?php echo $form->textField($element, 'hb_hct', array('size' => '20','maxlength' => '20','nowrapper'=>true))?>
+				<?php echo $element->getSetting('hb_hct_label')?>
 			</div>
 		</div>
 	</div>
