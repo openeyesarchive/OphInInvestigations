@@ -69,7 +69,7 @@ class Element_OphInInvestigations_BloodTests extends BaseEventTypeElement
 		// will receive user inputs.
 		return array(
 			array('event_id, hb_hct_tested, hb_hct, bun_electrolytes_tested, bun_electrolytes, blood_glucose_tested, blood_glucose, ', 'safe'),
-			array('hb_hct_tested, hb_hct, bun_electrolytes_tested, bun_electrolytes, blood_glucose_tested, blood_glucose, ', 'required'),
+			array('hb_hct_tested, bun_electrolytes_tested, blood_glucose_tested', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, event_id, hb_hct_tested, hb_hct, bun_electrolytes_tested, bun_electrolytes, blood_glucose_tested, blood_glucose, ', 'safe', 'on' => 'search'),
@@ -132,6 +132,21 @@ class Element_OphInInvestigations_BloodTests extends BaseEventTypeElement
 		return new CActiveDataProvider(get_class($this), array(
 			'criteria' => $criteria,
 		));
+	}
+
+	public function beforeValidate()
+	{
+		if ($this->hb_hct_tested && strlen($this->hb_hct) == 0) {
+			$this->addError('hb_hct',$this->getAttributeLabel('hb_hct').' cannot be blank');
+		}
+		if ($this->bun_electrolytes_tested && strlen($this->bun_electrolytes) == 0) {
+			$this->addError('bun_electrolytes',$this->getAttributeLabel('bun_electrolytes').' cannot be blank');
+		}
+		if ($this->blood_glucose_tested && strlen($this->blood_glucose) == 0) {
+			$this->addError('blood_glucose',$this->getAttributeLabel('blood_glucose').' cannot be blank');
+		}
+
+		return parent::beforeValidate();
 	}
 
 	protected function beforeSave()

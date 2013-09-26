@@ -122,6 +122,15 @@ class Element_OphInInvestigations_Ecg extends BaseEventTypeElement
 		));
 	}
 
+	public function beforeValidate()
+	{
+		if ($this->ecg_tested && strlen($this->ecg) == 0) {
+			$this->addError('ecg',$this->getAttributeLabel('ecg').' cannot be blank');
+		}
+
+		return parent::beforeValidate();
+	}
+
 	protected function beforeSave()
 	{
 		if (!$this->ecg_tested) {

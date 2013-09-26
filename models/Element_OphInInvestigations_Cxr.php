@@ -122,6 +122,15 @@ class Element_OphInInvestigations_Cxr extends BaseEventTypeElement
 		));
 	}
 
+	public function beforeValidate()
+	{
+		if ($this->cxr_tested && strlen($this->cxr) == 0) {
+			$this->addError('cxr',$this->getAttributeLabel('cxr').' cannot be blank');
+		}
+
+		return parent::beforeValidate();
+	}
+
 	protected function beforeSave()
 	{
 		if (!$this->cxr_tested) {

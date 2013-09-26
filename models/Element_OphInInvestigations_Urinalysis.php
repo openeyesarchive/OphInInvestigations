@@ -122,6 +122,15 @@ class Element_OphInInvestigations_Urinalysis extends BaseEventTypeElement
 		));
 	}
 
+	public function beforeValidate()
+	{
+		if ($this->urinalysis_tested && strlen($this->urinalysis) == 0) {
+			$this->addError('urinalysis',$this->getAttributeLabel('urinalysis').' cannot be blank');
+		}
+
+		return parent::beforeValidate();
+	}
+
 	protected function beforeSave()
 	{
 		if (!$this->urinalysis_tested) {
