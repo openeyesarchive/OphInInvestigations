@@ -122,22 +122,13 @@ class Element_OphInInvestigations_Urinalysis extends BaseEventTypeElement
 		));
 	}
 
-
-
 	protected function beforeSave()
 	{
+		if (!$this->urinalysis_tested) {
+			$this->urinalysis = '';
+		}
+
 		return parent::beforeSave();
-	}
-
-	protected function afterSave()
-	{
-
-		return parent::afterSave();
-	}
-
-	protected function beforeValidate()
-	{
-		return parent::beforeValidate();
 	}
 }
 ?>

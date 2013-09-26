@@ -134,22 +134,19 @@ class Element_OphInInvestigations_BloodTests extends BaseEventTypeElement
 		));
 	}
 
-
-
 	protected function beforeSave()
 	{
+		if (!$this->hb_hct_tested) {
+			$this->hb_hct = '';
+		}
+		if (!$this->bun_electrolytes_tested) {
+			$this->bun_electrolytes = '';
+		}
+		if (!$this->blood_glucose_tested) {
+			$this->blood_glucose = '';
+		}
+
 		return parent::beforeSave();
-	}
-
-	protected function afterSave()
-	{
-
-		return parent::afterSave();
-	}
-
-	protected function beforeValidate()
-	{
-		return parent::beforeValidate();
 	}
 }
 ?>

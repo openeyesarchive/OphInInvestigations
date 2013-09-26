@@ -122,22 +122,13 @@ class Element_OphInInvestigations_Ecg extends BaseEventTypeElement
 		));
 	}
 
-
-
 	protected function beforeSave()
 	{
+		if (!$this->ecg_tested) {
+			$this->ecg = '';
+		}
+
 		return parent::beforeSave();
-	}
-
-	protected function afterSave()
-	{
-
-		return parent::afterSave();
-	}
-
-	protected function beforeValidate()
-	{
-		return parent::beforeValidate();
 	}
 }
 ?>

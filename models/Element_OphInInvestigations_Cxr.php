@@ -122,22 +122,12 @@ class Element_OphInInvestigations_Cxr extends BaseEventTypeElement
 		));
 	}
 
-
-
 	protected function beforeSave()
 	{
+		if (!$this->cxr_tested) {
+			$this->cxr = '';
+		}
 		return parent::beforeSave();
-	}
-
-	protected function afterSave()
-	{
-
-		return parent::afterSave();
-	}
-
-	protected function beforeValidate()
-	{
-		return parent::beforeValidate();
 	}
 }
 ?>
