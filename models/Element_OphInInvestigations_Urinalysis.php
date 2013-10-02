@@ -65,7 +65,7 @@ class Element_OphInInvestigations_Urinalysis extends BaseEventTypeElement
 		// will receive user inputs.
 		return array(
 			array('event_id, urinalysis_tested, urinalysis, ', 'safe'),
-			array('urinalysis_tested, urinalysis, ', 'required'),
+			array('urinalysis_tested', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, event_id, urinalysis_tested, urinalysis, ', 'safe', 'on' => 'search'),
@@ -96,7 +96,7 @@ class Element_OphInInvestigations_Urinalysis extends BaseEventTypeElement
 		return array(
 			'id' => 'ID',
 			'event_id' => 'Event',
-			'urinalysis_tested' => 'Urinalysis',
+			'urinalysis_tested' => 'Urinalysis tested',
 			'urinalysis' => 'Urinalysis',
 		);
 	}

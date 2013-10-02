@@ -26,9 +26,11 @@
 			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('urinalysis_tested'))?>:</td>
 			<td><span class="big"><?php echo $element->urinalysis_tested ? 'Yes' : 'No'?></span></td>
 		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('urinalysis'))?>:</td>
-			<td><span class="big"><?php echo $element->urinalysis ? 'Yes' : 'No'?></span></td>
-		</tr>
+		<?php if ($element->urinalysis_tested) {?>
+			<tr>
+				<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('urinalysis'))?>:</td>
+				<td><span class="big"><?php echo $element->urinalysis ? 'Yes' : 'No'?></span></td>
+			</tr>
+		<?php }?>
 	</tbody>
 </table>

@@ -26,9 +26,11 @@
 			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('cxr_tested'))?>:</td>
 			<td><span class="big"><?php echo $element->cxr_tested ? 'Yes' : 'No'?></span></td>
 		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('cxr'))?></td>
-			<td><span class="big"><?php echo CHtml::encode($element->cxr)?></span></td>
-		</tr>
+		<?php if ($element->cxr_tested) {?>
+			<tr>
+				<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('cxr'))?>:</td>
+				<td><span class="big"><?php echo CHtml::encode($element->cxr)?></span></td>
+			</tr>
+		<?php }?>
 	</tbody>
 </table>

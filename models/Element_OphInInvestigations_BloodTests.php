@@ -102,9 +102,9 @@ class Element_OphInInvestigations_BloodTests extends BaseEventTypeElement
 			'event_id' => 'Event',
 			'hb_hct_tested' => 'Hb/Hct tested',
 			'hb_hct' => 'Hb/Hct',
-			'bun_electrolytes_tested' => 'BUN/Electrolytes',
+			'bun_electrolytes_tested' => 'BUN/Electrolytes tested',
 			'bun_electrolytes' => 'BUN/Electrolytes',
-			'blood_glucose_tested' => 'Blood glucose',
+			'blood_glucose_tested' => 'Blood glucose tested',
 			'blood_glucose' => 'Blood glucose',
 		);
 	}

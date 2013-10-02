@@ -65,7 +65,7 @@ class Element_OphInInvestigations_Ecg extends BaseEventTypeElement
 		// will receive user inputs.
 		return array(
 			array('event_id, ecg_tested, ecg, ', 'safe'),
-			array('ecg_tested, ecg, ', 'required'),
+			array('ecg_tested', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, event_id, ecg_tested, ecg, ', 'safe', 'on' => 'search'),
@@ -96,7 +96,7 @@ class Element_OphInInvestigations_Ecg extends BaseEventTypeElement
 		return array(
 			'id' => 'ID',
 			'event_id' => 'Event',
-			'ecg_tested' => 'ECG',
+			'ecg_tested' => 'ECG tested',
 			'ecg' => 'ECG',
 		);
 	}

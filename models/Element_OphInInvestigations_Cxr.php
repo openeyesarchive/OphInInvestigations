@@ -65,7 +65,7 @@ class Element_OphInInvestigations_Cxr extends BaseEventTypeElement
 		// will receive user inputs.
 		return array(
 			array('event_id, cxr_tested, cxr, ', 'safe'),
-			array('cxr_tested, cxr, ', 'required'),
+			array('cxr_tested', 'required'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, event_id, cxr_tested, cxr, ', 'safe', 'on' => 'search'),
@@ -96,7 +96,7 @@ class Element_OphInInvestigations_Cxr extends BaseEventTypeElement
 		return array(
 			'id' => 'ID',
 			'event_id' => 'Event',
-			'cxr_tested' => 'CXR',
+			'cxr_tested' => 'CXR tested',
 			'cxr' => 'CXR',
 		);
 	}

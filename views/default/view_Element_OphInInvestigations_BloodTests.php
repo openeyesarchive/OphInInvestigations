@@ -26,25 +26,31 @@
 			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('hb_hct_tested'))?>:</td>
 			<td><span class="big"><?php echo $element->hb_hct_tested ? 'Yes' : 'No'?></span></td>
 		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('hb_hct'))?></td>
-			<td><span class="big"><?php echo CHtml::encode($element->hb_hct)?></span></td>
-		</tr>
+		<?php if ($element->hb_hct_tested) {?>
+			<tr>
+				<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('hb_hct'))?>:</td>
+				<td><span class="big"><?php echo CHtml::encode($element->hb_hct)?></span></td>
+			</tr>
+		<?php }?>
 		<tr>
 			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('bun_electrolytes_tested'))?>:</td>
 			<td><span class="big"><?php echo $element->bun_electrolytes_tested ? 'Yes' : 'No'?></span></td>
 		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('bun_electrolytes'))?></td>
-			<td><span class="big"><?php echo CHtml::encode($element->bun_electrolytes)?></span></td>
-		</tr>
+		<?php if ($element->bun_electrolytes_tested) {?>
+			<tr>
+				<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('bun_electrolytes'))?>:</td>
+				<td><span class="big"><?php echo CHtml::encode($element->bun_electrolytes)?></span></td>
+			</tr>
+		<?php }?>
 		<tr>
 			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('blood_glucose_tested'))?>:</td>
 			<td><span class="big"><?php echo $element->blood_glucose_tested ? 'Yes' : 'No'?></span></td>
 		</tr>
-		<tr>
-			<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('blood_glucose'))?></td>
-			<td><span class="big"><?php echo CHtml::encode($element->blood_glucose)?></span></td>
-		</tr>
+		<?php if ($element->blood_glucose_tested) {?>
+			<tr>
+				<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('blood_glucose'))?>:</td>
+				<td><span class="big"><?php echo CHtml::encode($element->blood_glucose)?></span></td>
+			</tr>
+		<?php }?>
 	</tbody>
 </table>
