@@ -29,7 +29,7 @@
 		<?php if ($element->hb_hct_tested) {?>
 			<tr>
 				<td width="30%"><?php echo CHtml::encode($element->getAttributeLabel('hb_hct'))?>:</td>
-				<td><span class="big"><?php echo CHtml::encode($element->hb_hct)?></span></td>
+				<td><span class="big<?php if ($element->hb_hct <4 || $element->hb_hct >11) {?> red<?php }?>"><?php echo CHtml::encode($element->hb_hct)?></span></td>
 			</tr>
 		<?php }?>
 		<tr>
