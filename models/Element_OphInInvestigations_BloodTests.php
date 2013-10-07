@@ -73,6 +73,7 @@ class Element_OphInInvestigations_BloodTests extends BaseEventTypeElement
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, event_id, hb_hct_tested, hb_hct, bun_electrolytes_tested, bun_electrolytes, blood_glucose_tested, blood_glucose, ', 'safe', 'on' => 'search'),
+			array('hb_hct', 'numerical', 'min' => 4, 'max' => 11),
 		);
 	}
 
