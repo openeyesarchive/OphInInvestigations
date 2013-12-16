@@ -149,13 +149,9 @@ CREATE TABLE `et_ophininvestigations_urinalysis_version` (
 	public function down()
 	{
 		$this->dropColumn('et_ophininvestigations_bloodtests','deleted');
-		$this->dropColumn('et_ophininvestigations_bloodtests_version','deleted');
 		$this->dropColumn('et_ophininvestigations_cxr','deleted');
-		$this->dropColumn('et_ophininvestigations_cxr_version','deleted');
 		$this->dropColumn('et_ophininvestigations_ecg','deleted');
-		$this->dropColumn('et_ophininvestigations_ecg_version','deleted');
 		$this->dropColumn('et_ophininvestigations_urinalysis','deleted');
-		$this->dropColumn('et_ophininvestigations_urinalysis_version','deleted');
 
 		$this->dropTable('et_ophininvestigations_bloodtests_version');
 		$this->dropTable('et_ophininvestigations_cxr_version');
