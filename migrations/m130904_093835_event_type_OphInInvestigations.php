@@ -47,11 +47,11 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
 				'event_id' => 'int(10) unsigned NOT NULL',
 				'hb_hct_tested' => 'tinyint(1) unsigned NOT NULL DEFAULT 0', // Hb Hct
-				'hb_hct' => 'varchar(20) COLLATE utf8_bin DEFAULT \'\'', // Hb Hct
+				'hb_hct' => 'varchar(20) DEFAULT \'\'', // Hb Hct
 				'bun_electrolytes_tested' => 'tinyint(1) unsigned NOT NULL DEFAULT 0', // BUN Electrolytes
-				'bun_electrolytes' => 'varchar(20) COLLATE utf8_bin DEFAULT \'\'', // BUN Electrolytes
+				'bun_electrolytes' => 'varchar(20) DEFAULT \'\'', // BUN Electrolytes
 				'blood_glucose_tested' => 'tinyint(1) unsigned NOT NULL DEFAULT 0', // Blood glucose
-				'blood_glucose' => 'varchar(20) COLLATE utf8_bin DEFAULT \'\'', // Blood glucose
+				'blood_glucose' => 'varchar(20) DEFAULT \'\'', // Blood glucose
 				'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
 				'created_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
@@ -63,7 +63,7 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'CONSTRAINT `et_ophininvestigations_bloodtests_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_bloodtests_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_bloodtests_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 
 
@@ -72,7 +72,7 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
 				'event_id' => 'int(10) unsigned NOT NULL',
 				'ecg_tested' => 'tinyint(1) unsigned NOT NULL DEFAULT 0', // ECG
-				'ecg' => 'varchar(20) COLLATE utf8_bin DEFAULT \'\'', // ECG
+				'ecg' => 'varchar(20) DEFAULT \'\'', // ECG
 				'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
 				'created_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
@@ -84,7 +84,7 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'CONSTRAINT `et_ophininvestigations_ecg_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_ecg_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_ecg_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 
 
@@ -93,7 +93,7 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
 				'event_id' => 'int(10) unsigned NOT NULL',
 				'cxr_tested' => 'tinyint(1) unsigned NOT NULL DEFAULT 0', // CXR
-				'cxr' => 'varchar(20) COLLATE utf8_bin DEFAULT \'\'', // CXR
+				'cxr' => 'varchar(20) DEFAULT \'\'', // CXR
 				'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
 				'created_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
@@ -105,7 +105,7 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'CONSTRAINT `et_ophininvestigations_cxr_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_cxr_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_cxr_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 
 
@@ -114,7 +114,7 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'id' => 'int(10) unsigned NOT NULL AUTO_INCREMENT',
 				'event_id' => 'int(10) unsigned NOT NULL',
 				'urinalysis_tested' => 'tinyint(1) unsigned NOT NULL DEFAULT 0', // Urinalysis
-				'urinalysis' => 'varchar(20) COLLATE utf8_bin DEFAULT \'\'', // Urinalysis
+				'urinalysis' => 'varchar(20) DEFAULT \'\'', // Urinalysis
 				'last_modified_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
 				'last_modified_date' => 'datetime NOT NULL DEFAULT \'1901-01-01 00:00:00\'',
 				'created_user_id' => 'int(10) unsigned NOT NULL DEFAULT 1',
@@ -126,7 +126,7 @@ class m130904_093835_event_type_OphInInvestigations extends CDbMigration
 				'CONSTRAINT `et_ophininvestigations_urinalysis_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_urinalysis_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`)',
 				'CONSTRAINT `et_ophininvestigations_urinalysis_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)',
-			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin');
+			), 'ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci');
 
 	}
 
