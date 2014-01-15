@@ -9,11 +9,11 @@ CREATE TABLE `et_ophininvestigations_bloodtests_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 	`event_id` int(10) unsigned NOT NULL,
 	`hb_hct_tested` tinyint(1) unsigned NOT NULL DEFAULT '0',
-	`hb_hct` varchar(20) COLLATE utf8_bin DEFAULT '',
+	`hb_hct` varchar(20) DEFAULT '',
 	`bun_electrolytes_tested` tinyint(1) unsigned NOT NULL DEFAULT '0',
-	`bun_electrolytes` varchar(20) COLLATE utf8_bin DEFAULT '',
+	`bun_electrolytes` varchar(20) DEFAULT '',
 	`blood_glucose_tested` tinyint(1) unsigned NOT NULL DEFAULT '0',
-	`blood_glucose` varchar(20) COLLATE utf8_bin DEFAULT '',
+	`blood_glucose` varchar(20) DEFAULT '',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
 	`created_user_id` int(10) unsigned NOT NULL DEFAULT '1',
@@ -25,7 +25,7 @@ CREATE TABLE `et_ophininvestigations_bloodtests_version` (
 	CONSTRAINT `acv_et_ophininvestigations_bloodtests_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_bloodtests_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_bloodtests_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophininvestigations_bloodtests_version','id','int(10) unsigned NOT NULL');
@@ -45,7 +45,7 @@ CREATE TABLE `et_ophininvestigations_cxr_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 	`event_id` int(10) unsigned NOT NULL,
 	`cxr_tested` tinyint(1) unsigned NOT NULL DEFAULT '0',
-	`cxr` varchar(20) COLLATE utf8_bin DEFAULT '',
+	`cxr` varchar(20) DEFAULT '',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
 	`created_user_id` int(10) unsigned NOT NULL DEFAULT '1',
@@ -57,7 +57,7 @@ CREATE TABLE `et_ophininvestigations_cxr_version` (
 	CONSTRAINT `acv_et_ophininvestigations_cxr_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_cxr_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_cxr_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophininvestigations_cxr_version','id','int(10) unsigned NOT NULL');
@@ -77,7 +77,7 @@ CREATE TABLE `et_ophininvestigations_ecg_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 	`event_id` int(10) unsigned NOT NULL,
 	`ecg_tested` tinyint(1) unsigned NOT NULL DEFAULT '0',
-	`ecg` varchar(20) COLLATE utf8_bin DEFAULT '',
+	`ecg` varchar(20) DEFAULT '',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
 	`created_user_id` int(10) unsigned NOT NULL DEFAULT '1',
@@ -89,7 +89,7 @@ CREATE TABLE `et_ophininvestigations_ecg_version` (
 	CONSTRAINT `acv_et_ophininvestigations_ecg_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_ecg_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_ecg_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophininvestigations_ecg_version','id','int(10) unsigned NOT NULL');
@@ -109,7 +109,7 @@ CREATE TABLE `et_ophininvestigations_urinalysis_version` (
 	`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
 	`event_id` int(10) unsigned NOT NULL,
 	`urinalysis_tested` tinyint(1) unsigned NOT NULL DEFAULT '0',
-	`urinalysis` varchar(20) COLLATE utf8_bin DEFAULT '',
+	`urinalysis` varchar(20) DEFAULT '',
 	`last_modified_user_id` int(10) unsigned NOT NULL DEFAULT '1',
 	`last_modified_date` datetime NOT NULL DEFAULT '1901-01-01 00:00:00',
 	`created_user_id` int(10) unsigned NOT NULL DEFAULT '1',
@@ -121,7 +121,7 @@ CREATE TABLE `et_ophininvestigations_urinalysis_version` (
 	CONSTRAINT `acv_et_ophininvestigations_urinalysis_lmui_fk` FOREIGN KEY (`last_modified_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_urinalysis_cui_fk` FOREIGN KEY (`created_user_id`) REFERENCES `user` (`id`),
 	CONSTRAINT `acv_et_ophininvestigations_urinalysis_ev_fk` FOREIGN KEY (`event_id`) REFERENCES `event` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci
 		");
 
 		$this->alterColumn('et_ophininvestigations_urinalysis_version','id','int(10) unsigned NOT NULL');
